@@ -45,7 +45,7 @@ img {
 .motArrow {
     transform: rotate(45deg);
     opacity: 0;
-    animation: motArrow 400ms ease-in 300ms;
+    animation: motArrow 400ms ease-in 500ms;
     animation-fill-mode: forwards;
     transform-origin: top left;
 }
@@ -60,6 +60,6 @@ img {
 .mot {
     transform: translateY(-20%) translateX(-50%);
     opacity: 0;
-    animation: mot 400ms ease-in 300ms;
+    animation: mot 400ms ease-in 500ms;
     animation-fill-mode: forwards;
 }
