@@ -8,19 +8,19 @@ export default function Header() {
     const [scroll, setScroll] = useState(0)
     const timer = useRef()
 
-    useEffect(() => {
-        // debouncing scroll position
-        let callback = () => {
-            clearTimeout(timer.current)
-            if(scroll > 100) {
-                timer.current = setTimeout(() => {
-                    setScroll(window.scrollY)
-                }, 500)
-            } else return setScroll(window.scrollY)
-        }
-        window.addEventListener('scroll', callback)
-        return () => window.removeEventListener('scroll', callback)
-    })
+    // useEffect(() => {
+    //     // debouncing scroll position
+    //     let callback = () => {
+    //         clearTimeout(timer.current)
+    //         if(scroll > 100) {
+    //             timer.current = setTimeout(() => {
+    //                 setScroll(window.scrollY)
+    //             }, 500)
+    //         } else return setScroll(window.scrollY)
+    //     }
+    //     window.addEventListener('scroll', callback)
+    //     return () => window.removeEventListener('scroll', callback)
+    // })
 
     return (
         <header className={`fixed top-0 right-0 transition-colors duration-300 left-0 z-50 ${scroll < 100 ? 'bg-transparent' : 'bg-background/90'}`}>
