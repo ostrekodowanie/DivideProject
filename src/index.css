@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.padding {
+    padding-left: 8vw;
+    padding-right: 8vw;
+}
+
+@media all and (min-width: 768px) {
+    .padding {
+        padding-left: 12vw;
+        padding-right: 12vw;
+    }
+}
+
+@media all and (min-width: 1536px) {
+    .padding {
+        padding-left: 18vw;
+        padding-right: 18vw;
+    }
+}
+
+@keyframes motArrow {
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.motArrow {
+    transform: rotate(45deg);
+    opacity: 0;
+    animation: motArrow 400ms ease-in 300ms;
+    animation-fill-mode: forwards;
+    transform-origin: top left;
+}
+
+@keyframes mot {
+    100% {
+        transform: translateY(0%) translateX(-50%);
+        opacity: 1;
+    }
+}
+
+.mot {
+    transform: translateY(-20%) translateX(-50%);
+    opacity: 0;
+    animation: mot 400ms ease-in 300ms;
+    animation-fill-mode: forwards;
+}
