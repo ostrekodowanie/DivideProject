@@ -7,7 +7,7 @@ export default function Footer() {
             <div className="flex flex-col gap-12 lg:gap-0 lg:flex-row justify-between">
                 <div className="flex flex-col gap-4">
                     <h3 className="font-medium text-white mb-2">Divide Project</h3>
-                    <p className="text-white/[0.62] text-sm">+48 753 983 413</p>
+                    <p className="text-white/[0.62] text-sm">+48 666 278 116</p>
                     <p className="text-white/[0.62] text-sm">divideproject.business@gmail.com</p>
                 </div>
                 <div className="flex flex-col gap-4">
