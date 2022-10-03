@@ -11,6 +11,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    overflow-y: scroll;
+}
+
 img {
     display: block;
     max-width: 100%;

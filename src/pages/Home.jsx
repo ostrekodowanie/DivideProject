@@ -3,6 +3,7 @@ import { landing, arrowLeft, turek, szyszka, filip, motArrow, designCode, backen
 import gsap, { Power0 } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useEffect, useRef } from 'react'
+import CodeBox from '../components/CodeBox'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -123,6 +124,7 @@ const RoleSection = props => {
                 </div>
                 <div className={props.order === 'left' ? 'xl:ml-[-12vw] 2xl:ml-[-18vw] lg:mr-auto relative' : 'xl:mr-[-12vw] 2xl:mr-[-18vw] lg:ml-auto relative'}>
                     <img className='relative z-10' src={props.img} alt="" />
+                    <CodeBox className={`-bottom-8 ${props.order === 'left' ? '-right-24' : '-left-24'} z-10`} title='class LoginView(APIView):' properties={['def post(self, request):', 'password = request.data[‘password’]', 'user = User.objects.filter(email=email).first()...']} />
                 </div>
             </div>
         </section>
