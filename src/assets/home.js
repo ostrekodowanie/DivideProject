@@ -10,6 +10,9 @@ import filip from './filip.svg'
 import pros1 from './pros1.svg'
 import pros2 from './pros2.svg'
 import pros3 from './pros3.svg'
+import google from './google.svg'
+import fb from './fb.svg'
+import linkedin from './in.svg'
 
 export {
     landing,
@@ -23,5 +26,8 @@ export {
     filip,
     pros1,
     pros2,
-    pros3
+    pros3,
+    google,
+    fb,
+    linkedin
 }

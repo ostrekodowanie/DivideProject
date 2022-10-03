@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react"
 import { logo } from "../assets/header"
 import CustomLink from "./CustomLink"
+import { Link } from 'react-router-dom' 
 import { useLocation } from 'react-router'
 import { arrowLeft } from "../assets/home"
 
@@ -49,11 +50,11 @@ const NavProvider = () => {
     )
 }
 
-const Logo = () => <img className="max-h-7" src={logo} alt='' />
+const Logo = () => <Link to='/'><img className="max-h-7" src={logo} alt='' /></Link>
 
 const Navbar = ({ nav }) => {
     return (
-        <nav className={`${nav ? '-translate-x-full' : ''} transition-transform duration-300 absolute left-full h-screen w-full top-0 bg-background flex flex-col gap-4 items-center justify-center sm:relative sm:justify-end sm:flex-row sm:left-auto sm:bg-transparent sm:h-full sm:w-auto sm:gap-8 text-sm`}>
+        <nav className={`${nav ? '-translate-x-full' : ''} transition-transform duration-300 absolute left-full h-screen w-full top-0 bg-background flex flex-col gap-4 items-center justify-center sm:static sm:justify-end sm:flex-row sm:left-auto sm:bg-transparent sm:h-full sm:w-auto sm:gap-8 text-sm`}>
             <CustomLink className='text-font' to='/'>Home</CustomLink>
             <CustomLink className='text-font' to='/portfolio'>Portfolio</CustomLink>
             <CustomLink className='text-font' to='/contact'>Contact us</CustomLink>

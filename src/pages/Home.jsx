@@ -1,5 +1,10 @@
 import { Link } from 'react-router-dom'
-import { landing, arrowLeft, turek, szyszka, filip, motArrow, designCode, backendCode, pros1, pros2, pros3 } from '../assets/home'
+import { landing, arrowLeft, turek, szyszka, filip, motArrow, designCode, backendCode, pros1, pros2, pros3, google, linkedin, fb } from '../assets/home'
+import gsap, { Power0 } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useEffect, useRef } from 'react'
+
+gsap.registerPlugin(ScrollTrigger)
 
 export default function Home() {
     return (
@@ -40,6 +45,12 @@ const Landing = () => {
                     </div>
                 </div>
             </div>
+            {/* <div className='flex items-center rounded-3xl gap-4 absolute left-[8vw] md:left-[12vw] 2xl:left-[18vw] bottom-[1.4in] py-3 px-6 overflow-hidden'>
+                <a className='relative z-10' href='/'><img src={google} alt="" /></a>
+                <a className='relative z-10' href='/'><img src={fb} alt="" /></a>
+                <a className='relative z-10' href='/'><img src={linkedin} alt="" /></a>
+                <div className='absolute inset-0 bg-primary opacity-[0.15]' />
+            </div> */}
         </section>
     )
 }
@@ -80,16 +91,29 @@ const roles = [
 const Roles = () => {
     return (
         <>
-            {roles.map(role => <RoleSection {...role} key={role} />)}
+            {roles.map(role => <RoleSection {...role} key={role.title.small} />)}
         </>
     )
 }
 
 const RoleSection = props => {
+    const text = useRef()
+
+    useEffect(() => {
+        gsap.to(text.current, {
+            scrollTrigger: {
+                trigger: text.current,
+                start: 'top 70%'
+            },
+            opacity: 1,
+            ease: Power0.easeInOut
+        })
+    })
+
     return (
         <section className='padding py-[1in] xl:py-[1.4in] flex flex-col bg-background bg-landing'>
             <div className={`flex flex-col ${props.order === 'left' ? 'xl:flex-row-reverse' : 'xl:flex-row'} xl:items-center gap-16 xl:gap-48`}>
-                <div className='flex flex-col gap-6'>
+                <div ref={text} className='flex flex-col gap-6 opacity-0 '>
                     <h1 className='flex flex-col gap-2 text-font font-semibold'>
                         <span className='text-2xl'>{props.title.small}</span>
                         <span className='text-5xl'>{props.title.big}</span>
@@ -124,11 +148,26 @@ const pros = [
 ]
 
 const Pros = () => {
+
+    useEffect(() => {
+        const boxes = gsap.utils.toArray('.box')
+        gsap.to(boxes, {
+            scrollTrigger: {
+                start: 'top 80%',
+                trigger: '.box'
+            },
+            stagger: 0.1,
+            y: '0%',
+            opacity: 1,
+            ease: Power0.easeOut
+        })
+    })
+
     return (
         <section className='padding py-[1in] xl:py-[1.4in] flex flex-col bg-background bg-landing'>
-            <h2 className='text-font text-center text-3xl xl:text-4xl font-semibold mb-16'>Why should you choose us?</h2>
+            <h2 className='text-font text-center text-3xl xl:text-4xl font-semibold mb-16'>Why would you choose us?</h2>
             <div className='flex flex-wrap justify-center lg:grid-cols-2 lg:grid xl:grid-cols-3 gap-16 xl:gap-8'>
-                {pros.map((pro, i) => <Pro {...pro} key={pro.title} />)}
+                {pros.map(pro => <Pro {...pro} key={pro.title} />)}
             </div>
         </section>
     )
@@ -136,7 +175,7 @@ const Pros = () => {
 
 const Pro = props => {
     return (
-        <div className='p-10 flex flex-col items-center gap-3 bg-pros backdrop-blur-md text-center rounded-lg after:absolute after:h-[3px] after:bg-primary after:left-0 after:right-0 after:bottom-0 border-[2px] border-[#B91DFF]/10'>
+        <div className='box p-10 translate-y-[10%] opacity-0 flex flex-col items-center gap-3 bg-pros backdrop-blur-md text-center rounded-lg after:absolute after:h-[3px] after:bg-primary after:left-0 after:right-0 after:bottom-0 border-[2px] border-[#B91DFF]/10'>
             <div className='h-16 w-16 mb-6 rounded-md flex items-center justify-center relative overflow-hidden'>
                 <div className='absolute inset-0 bg-primary opacity-[0.16]' />
                 <img className='max-h-[50%]' src={props.img} alt="" />

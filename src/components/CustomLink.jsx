@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
 import { useResolvedPath, useMatch } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function CustomLink({ to, children, className }) {
     const activePath = useResolvedPath(to)
