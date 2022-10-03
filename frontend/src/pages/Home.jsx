@@ -155,7 +155,7 @@ const Pros = () => {
         const boxes = gsap.utils.toArray('.box')
         gsap.to(boxes, {
             scrollTrigger: {
-                start: 'top 80%',
+                start: 'top 60%',
                 trigger: '.box'
             },
             stagger: 0.1,
