@@ -17,7 +17,7 @@ TECHNOLOGIES = [
 
 class TechnologiesUsed(models.Model):
     technology = models.CharField(max_length=255, choices=TECHNOLOGIES)
-
+    
     def __str__(self):
         return "{}".format(self.technology)
 
@@ -26,6 +26,7 @@ class Project(models.Model):
     image = models.ImageField(upload_to='')
     type = models.CharField(max_length=255, choices=TYPES)
     technologies = models.ManyToManyField(TechnologiesUsed)
+    link = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
