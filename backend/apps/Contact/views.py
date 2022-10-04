@@ -21,6 +21,6 @@ class ContactView(GenericAPIView):
         data = {'email_body': email_body, 'to_email': 'divideproject.business@gmail.com', 'email_subject': email_subject}
         Util.send_email(data)
 
-        return Response({'message': 'Message has been sent'}, status=status.HTTP_200_OK)
+        return Response({'Message has been sent'}, status=status.HTTP_200_OK)
 
 
