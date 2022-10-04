@@ -44,9 +44,9 @@ const LiveProject = props => {
             <div className="flex flex-col gap-3">
                 <h4 className="text-font">{props.name}</h4>
                 <h5 className="text-sm text-fontLight">Project type: <span className="text-font">{props.type}</span></h5>
-                <h5 className="text-sm text-fontLight">Tools used: {props.tools.map(tool => <span className="text-font">{tool}, </span>)}</h5>
+                <h5 className="text-sm text-fontLight">Tools used: {props.technologies.map(tool => <span className="text-font">{tool}, </span>)}</h5>
             </div>
-            <a className="bg-primary bg-clip-text text-transparent underline" href={props.link} target='_blank'></a>
+            <a className="bg-primary bg-clip-text text-transparent after:h-[2px] after:block after:bg-primary mb-4" href={props.link} target='_blank'>Live View</a>
         </div>
     )
 }

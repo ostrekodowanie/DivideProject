@@ -1,4 +1,3 @@
-from sre_parse import CATEGORIES
 from django.db import models
 
 WEBSITE_WWW = 'Website WWW'
