@@ -13,6 +13,8 @@ import pros3 from './pros3.svg'
 import google from './google.svg'
 import fb from './fb.svg'
 import linkedin from './in.svg'
+import rating from './rating.svg'
+import react from './react.svg'
 
 export {
     landing,
@@ -29,5 +31,7 @@ export {
     pros3,
     google,
     fb,
-    linkedin
+    linkedin,
+    rating,
+    react
 }

@@ -13,15 +13,15 @@ export default function Footer() {
                 <div className="flex flex-col gap-4">
                     <h3 className="font-medium text-white mb-2">Website</h3>
                     <Link to='/' className="text-white/[0.62] text-sm">Home</Link>
-                    <Link to='/products' className="text-white/[0.62] text-sm">Products</Link>
-                    <Link to='/contact' className="text-white/[0.62] text-sm">Contact</Link>
+                    <Link to='/portfolio' className="text-white/[0.62] text-sm">Portfolio</Link>
+                    <Link to='/contact' className="text-white/[0.62] text-sm">Contact us</Link>
                 </div>
                 <div className="flex flex-col gap-4">
                     <h3 className="font-medium text-white mb-2">Products</h3>
-                    <Link to='/products' className="text-white/[0.62] text-sm">Apps</Link>
-                    <Link to='/products' className="text-white/[0.62] text-sm">Templates</Link>
-                    <Link to='/products' className="text-white/[0.62] text-sm">Courses</Link>
-                    <Link to='/products' className="text-white/[0.62] text-sm">Order</Link>
+                    <a href='https://services.divideproject.works/products' target='_blank' className="text-white/[0.62] text-sm">Apps</a>
+                    <a href='https://services.divideproject.works/products' target='_blank' className="text-white/[0.62] text-sm">Templates</a>
+                    <a href='https://services.divideproject.works/products' target='_blank' className="text-white/[0.62] text-sm">Courses</a>
+                    <a href='https://services.divideproject.works/products' target='_blank' className="text-white/[0.62] text-sm">Order</a>
                 </div>
                 <div className="flex flex-col gap-4">
                     <h3 className="font-medium text-white mb-2">Development</h3>
