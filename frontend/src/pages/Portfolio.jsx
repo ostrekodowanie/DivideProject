@@ -19,7 +19,7 @@ const Live = () => {
     useEffect(() => {
         fetch('/api/projects')
             .then(res => res.json())
-            .then(data => setProjects(data.filter(project => project.type === 'Website WWW')))
+            .then(data => setProjects(data))
             .catch(() => setAlert("Try again later"))
     }, [])
 

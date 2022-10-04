@@ -16,7 +16,7 @@ TECHNOLOGIES = [
 ]
 
 class TechnologiesUsed(models.Model):
-    technology = models.CharField(max_length=255, primary_key = True, choices=TECHNOLOGIES)
+    technology = models.CharField(max_length=255, choices=TECHNOLOGIES)
 
     def __str__(self):
         return "{}".format(self.technology)
