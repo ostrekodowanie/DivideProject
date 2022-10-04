@@ -1,8 +1,10 @@
 from django.db import models
 
-WEBSITE_WWW = 'Website WWW'
+WEBSITE = 'Website'
+APPLICATION = 'Application'
 TYPES = [
-    (WEBSITE_WWW, 'Website WWW'),
+    (WEBSITE, 'Website'),
+    (APPLICATION, 'Application'),
 ]
 
 FIGMA = 'Figma'
