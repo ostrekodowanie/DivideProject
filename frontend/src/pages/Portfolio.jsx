@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react"
 
-const syf = [1]
-
 export default function Portfolio() {
     
     return (
@@ -29,7 +27,7 @@ const Live = () => {
                 <h3 className="bg-primary bg-clip-text font-medium text-transparent tracking-wider text-lg">WITH LIVE VIEW</h3>
                 <h2 className="text-font text-4xl lg:text-5xl font-medium">Projects</h2>
             </div>
-            <div className="flex flex-col sm:grid grid-cols-projects">
+            <div className="flex flex-col sm:grid grid-cols-projects gap-x-6 gap-y-12">
                 {alert ? <p className="text-red-400">{alert}</p> : <></>}
                 {projects.map(project => <LiveProject {...project} key={project.id} />)}
             </div>
@@ -40,13 +38,13 @@ const Live = () => {
 const LiveProject = props => {
     return (
         <div className='p-6 flex flex-col rounded-xl font-medium gap-6 bg-pros backdrop-blur-md after:absolute after:h-[3px] after:bg-primary after:left-0 after:right-0 after:bottom-0 border-[2px] border-[#B91DFF]/10'>
-            <img className="rounded-xl" src={props.image} alt="" />
-            <div className="flex flex-col gap-3">
+            <img className="rounded-md" src={props.image} alt="" />
+            <div className="flex flex-col gap-2">
                 <h4 className="text-font">{props.name}</h4>
                 <h5 className="text-sm text-fontLight">Project type: <span className="text-font">{props.type}</span></h5>
                 <h5 className="text-sm text-fontLight">Tools used: {props.technologies.map(tool => <span className="text-font">{tool}, </span>)}</h5>
             </div>
-            <a className="bg-primary bg-clip-text text-transparent after:h-[2px] after:block after:bg-primary mb-4" href={props.link} target='_blank'>Live View</a>
+            <a className="bg-primary text-sm bg-clip-text text-transparent max-w-max after:h-[1px] after:block after:bg-primary mb-4" href={props.link} target='_blank'>Live View</a>
         </div>
     )
 }
