@@ -21,7 +21,8 @@ module.exports = {
         blur: 'linear-gradient(90.42deg, rgba(185, 29, 255, 0.12) -20.6%, rgba(46, 61, 255, 0.12) 104.76%)'
       },
       gridTemplateColumns: {
-        form: '2fr 1fr 1fr'
+        form: '2fr 1fr 1fr',
+        projects: 'repeat(auto-fit, minmax(250px, 1fr))'
       }
     },
   },
