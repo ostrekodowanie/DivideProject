@@ -11,7 +11,8 @@ module.exports = {
         background: '#0B0511',
         font: '#FAFAFA',
         fontLight: '#B9B9B9',
-        pros: 'rgba(11, 9, 12, 0.31)'
+        pros: 'rgba(11, 9, 12, 0.31)',
+        tools: 'rgba(14, 7, 21, 0.31)'
       },
       backgroundImage: {
         primary: 'linear-gradient(90.42deg, #B91DFF -20.6%, #2E3DFF 104.76%)',
