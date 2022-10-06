@@ -47,7 +47,7 @@ export default function Tools() {
 
 const Tool = props => {
     return (
-        <a href={props.href} target='_blank' className="flex flex-col tool opacity-0 items-start p-6 transition duration-[250ms] backdrop-blur-md bg-tools cursor-pointer border-[2px] border-transparent max-w-[4in] hover:border-[#B91DFF]/10 rounded-md hover:bg-[#12081C] hover:scale-105 gap-2">
+        <a href={props.href} target='_blank' className="flex flex-col items-start p-6 transition duration-[250ms] backdrop-blur-md bg-tools cursor-pointer border-[2px] border-transparent max-w-[4in] hover:border-[#B91DFF]/10 rounded-md hover:bg-[#12081C] hover:scale-105 gap-2">
             <img className="max-h-[2em] mb-2" src={props.img} alt="" />
             <h3 className="text-font text-lg font-medium">{props.title}</h3>
             <p className="text-sm text-fontLight font-medium">{props.p}</p>
