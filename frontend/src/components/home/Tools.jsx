@@ -1,6 +1,4 @@
-import gsap, { Power0 } from "gsap"
 import { designCode, react } from "../../assets/home"
-import { useEffect, useRef } from 'react'
 
 const tools = [
     {
@@ -35,8 +33,7 @@ export default function Tools() {
             <div className='flex flex-col xl:flex-row xl:items-center gap-16 xl:gap-48'>
                 <div className='flex flex-col gap-6'>
                     <h2 className='text-font text-3xl xl:text-4xl font-semibold mb-8'>What do we use?</h2>
-                    
-                    <div className="grid grid-cols-2 gap-8">
+                    <div ref={toolsGrid} className="flex flex-col sm:grid grid-cols-2 gap-8">
                         {tools.map(tool => <Tool {...tool} key={tool.title} />)}
                     </div>
                 </div>
@@ -49,21 +46,8 @@ export default function Tools() {
 }
 
 const Tool = props => {
-    const text = useRef(null)
-
-    useEffect(() => {
-        gsap.to(text.current, {
-            scrollTrigger: {
-                trigger: text.current,
-                start: 'top 70%'
-            },
-            opacity: 1,
-            ease: Power0.easeInOut
-        })
-    })
-
     return (
-        <a ref={text} href={props.href} target='_blank' className="flex flex-col items-start p-6 transition duration-[250ms] backdrop-blur-md bg-tools cursor-pointer border-[2px] border-transparent max-w-[4in] hover:border-[#B91DFF]/10 rounded-md hover:bg-[#12081C] hover:scale-105 gap-2">
+        <a href={props.href} target='_blank' className="flex flex-col tool opacity-0 items-start p-6 transition duration-[250ms] backdrop-blur-md bg-tools cursor-pointer border-[2px] border-transparent max-w-[4in] hover:border-[#B91DFF]/10 rounded-md hover:bg-[#12081C] hover:scale-105 gap-2">
             <img className="max-h-[2em] mb-2" src={props.img} alt="" />
             <h3 className="text-font text-lg font-medium">{props.title}</h3>
             <p className="text-sm text-fontLight font-medium">{props.p}</p>

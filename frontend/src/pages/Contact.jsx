@@ -2,6 +2,9 @@ import { useEffect, useState } from "react"
 import { arrowLeft } from "../assets/home"
 import { logo } from "../assets/header"
 import { location, mail, phone } from "../assets/contact"
+import Goal from "../components/contact/Goal"
+import Message from "../components/contact/Message"
+import Budget from "../components/contact/Budget"
 
 export default function Contact() {
     return (
@@ -19,8 +22,6 @@ const formFields = [
     'first_name',
     'last_name',
     'email',
-    'goal',
-    'budget'
 ]
 
 const Form = () => {
@@ -49,6 +50,8 @@ const Form = () => {
         <form onSubmit={handleSubmit}>
             <div className="flex flex-col gap-6 md:grid grid-cols-form">
                 {formFields.map(field => <Input field={field} setInfo={setInfo} key={field} />)}
+                <Goal setInfo={setInfo} />
+                <Budget setInfo={setInfo} />
                 <Message setInfo={setInfo} />
             </div>
             <button type="submit" className="py-2 px-5 text-font text-sm font-medium rounded-3xl bg-primary transition-transform hover:scale-105 flex items-center mt-12">Send message <img className="max-h-[1em] ml-2" src={arrowLeft} alt="" /></button>
@@ -56,7 +59,7 @@ const Form = () => {
     )
 }
 
-const inputStyles = 'backdrop-blur-md bg-input rounded-xl px-6 py-4 outline-none text-font min-w-0 border-[1px] border-[#B91DFF]/10'
+export const inputStyles = 'backdrop-blur-md bg-input rounded-xl px-6 py-4 outline-none text-font min-w-0 border-[1px] border-[#B91DFF]/10'
 
 const Input = ({ field, setInfo }) => {
     const [active, setActive] = useState(false)
@@ -78,36 +81,10 @@ const Input = ({ field, setInfo }) => {
                     {field.includes('_') ? field.split("_").map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(" ") : field.charAt(0).toUpperCase() + field.substring(1)}
                 </span>
             </label>
-            <input className={`bg-transparent outline-none font-medium transition duration-300 relative z-20 ${active ? 'translate-y-[30%]' : ''}`} onFocus={() => setActive(true)} onBlur={() => !input ? setActive(false) : {}} onChange={e => setInput(e.target.value)} type="text" id={field} />
+            <input className={`bg-transparent outline-none font-medium transition duration-300 relative z-20 ${active ? 'translate-y-[30%]' : ''}`} required autoComplete="off" onFocus={() => setActive(true)} onBlur={() => !input ? setActive(false) : {}} onChange={e => setInput(e.target.value)} type="text" id={field} />
         </div>
     )
 }
-
-const Message = ({ setInfo }) => {
-    const [active, setActive] = useState(false)
-    const [input, setInput] = useState('')
-
-    useEffect(() => {
-        setInfo(prev => {
-            return {
-                ...prev,
-                message: input
-            }
-        })
-    }, [input])
-
-    return (
-        <div className={`relative flex flex-col col-span-3 backdrop-blur-md bg-input rounded-xl outline-none border-[1px] border-[#B91DFF]/10 text-font min-w-0`}>
-            <label htmlFor='message' className="z-10 absolute inset-0">
-                <span className={`transition left-6 top-4 font-medium text-[#4C3963] absolute duration-300 origin-left ${active ? '-translate-y-[60%] scale-75' : ''}`}>
-                    Message
-                </span>
-            </label>
-            <textarea className={`bg-transparent outline-none font-medium transition duration-300 relative z-20 px-6 py-4 min-h-[2in] ${active ? 'pt-6' : ''}`} onFocus={() => setActive(true)} onBlur={() => !input ? setActive(false) : {}} onChange={e => setInput(e.target.value)} type="text" id='message' />
-        </div>
-    )
-}
-
 
 const Info = () => {
     return (
