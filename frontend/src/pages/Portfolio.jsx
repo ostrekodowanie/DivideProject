@@ -55,7 +55,7 @@ const Design = () => {
         <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
                 <h3 className="bg-primary bg-clip-text text-transparent font-medium tracking-wider text-lg">DESIGN PRESENTATION</h3>
-                <h2 className="text-font text-4xl lg:text-5xl font-medium">Projects</h2>
+                <h2 className="text-font text-4xl lg:text-5xl font-medium">Layouts</h2>
             </div>
             <div className="flex flex-col sm:grid grid-cols-projects">
                 {/* {projects.map(project => <DesignImage src={project.src} key={project.src} />)} */}
