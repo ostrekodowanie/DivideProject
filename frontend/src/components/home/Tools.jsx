@@ -33,7 +33,7 @@ export default function Tools() {
             <div className='flex flex-col xl:flex-row xl:items-center gap-16 xl:gap-48'>
                 <div className='flex flex-col gap-6'>
                     <h2 className='text-font text-3xl xl:text-4xl font-semibold mb-8'>What do we use?</h2>
-                    <div ref={toolsGrid} className="flex flex-col sm:grid grid-cols-2 gap-8">
+                    <div className="flex flex-col sm:grid grid-cols-2 gap-8">
                         {tools.map(tool => <Tool {...tool} key={tool.title} />)}
                     </div>
                 </div>
