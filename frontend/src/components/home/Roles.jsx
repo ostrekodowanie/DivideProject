@@ -73,7 +73,7 @@ const RoleSection = props => {
                         <span className='text-5xl'>{props.title.big}</span>
                     </h2>
                     <h2 className='bg-primary bg-clip-text text-lg text-transparent font-semibold'>{props.name}</h2>
-                    <p className='text-fontLight leading-loose max-w-[5.5in] xl:max-w-[4in]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At pretium cursus in in sed congue risus. Etiam cursus orci quis neque ac enim morbi. Elit, pulvinar nisl, tortor vel parturient. Placerat consectetur sit gravida tellus lectus amet, ac, id arcu.</p>
+                    <p className='text-fontLight leading-loose max-w-[5.5in] xl:max-w-[4in]'>{props.p}</p>
                 </div>
                 <div className={props.order === 'left' ? 'xl:ml-[-12vw] 2xl:ml-[-18vw] lg:mr-auto relative' : 'xl:mr-[-12vw] 2xl:mr-[-18vw] lg:ml-auto relative'}>
                     <img className='relative z-10' src={props.img} alt="" />
