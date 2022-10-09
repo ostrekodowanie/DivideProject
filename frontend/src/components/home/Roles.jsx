@@ -22,10 +22,10 @@ const roles = [
             big: 'Developer'
         },
         name: 'Filip Ferencz',
-        p: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et amet interdum sed nibh orci, auctor. Dignissim donec neque ullamcorper aliquet eu. Non eget adipiscing nibh arcu et. Senectus massa massa purus platea mi accumsan dapibus egestas. Nunc scelerisque integer facilisi aliquam adipiscing volutpat mauris massa.',
+        p: 'Working with frameworks like React, Redux, Tailwind CSS, developing views for clients based on the design we make and prepared for the back-end functionality. Integrating data such as from api, rendering applications and websites based on reusable components. Defining logistic and structure of created product.',
         img: backendCode,
         order: 'left',
-        properties: ['def post(self, request):', 'password = request.data[‘password’]', 'user = User.objects.filter(email=email).first()...'],
+        properties: ['function Header(props) {', 'password = request.data[‘password’]', 'user = User.objects.filter(email=email).first()...'],
         codeTitle: 'class LoginView(APIView):'
     },
     {
