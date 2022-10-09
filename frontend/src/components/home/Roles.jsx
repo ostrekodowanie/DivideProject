@@ -25,7 +25,7 @@ const roles = [
         p: 'Working with frameworks like React, Redux, Tailwind CSS, developing views for clients based on the design we make and prepared for the back-end functionality. Integrating data such as from api, rendering applications and websites based on reusable components. Defining logistic and structure of created product.',
         img: backendCode,
         order: 'left',
-        properties: ['function Header(props) {', 'password = request.data[‘password’]', 'user = User.objects.filter(email=email).first()...'],
+        properties: ['function Header(props) {', 'const logged = useState(false)', "return navigate('/profile')"],
         codeTitle: 'class LoginView(APIView):'
     },
     {
