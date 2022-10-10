@@ -68,3 +68,17 @@ img {
     animation: mot 400ms ease-in 500ms;
     animation-fill-mode: forwards;
 }
+
+@keyframes landing {
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.landing {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: landing 500ms ease-out 250ms;
+    animation-fill-mode: forwards;
+}

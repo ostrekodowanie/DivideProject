@@ -10,12 +10,12 @@ const pros = [
     },
     {
         title: 'Communication',
-        p: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et lectus dictum hendrerit massa rhoncus. Adipiscing velit pretium senectus at molestie aliquam donec venenatis.',
+        p: 'We are always available for our clients. That means we can always offer you help with our products. If you have a question contact us for detail informations.',
         img: pros2
     },
     {
         title: 'Universalism',
-        p: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et lectus dictum hendrerit massa rhoncus. Adipiscing velit pretium senectus at molestie aliquam donec venenatis.',
+        p: 'We are trying to make our products accessible for anyone. They are often designed to use on daily basis and with many possible modifications.',
         img: pros3
     }
 ]

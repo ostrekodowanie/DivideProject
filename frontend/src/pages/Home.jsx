@@ -24,7 +24,7 @@ export default function Home() {
 const Landing = () => {
     return (
         <section className='padding bg-background flex flex-col py-[1.4in] gap-12 bg-landing lg:flex-row lg:items-center lg:justify-end'>
-            <div className="flex flex-col gap-6 xl:mb-[8vw]">
+            <div className="landing flex flex-col gap-6 xl:mb-[8vw]">
                 <h1 className="text-font text-[2.7rem] leading-[1.1] font-semibold lg:w-max xl:text-5xl 2xl:text-[4rem]">We create<br />best <span className='bg-primary bg-clip-text text-transparent'>website</span><br />experiences</h1>
                 <p className="text-fontLight font-medium text-sm 2xl:text-[1rem]">Contact us and get the website you deserve to have.</p>
                 <div className="flex flex-wrap items-center gap-4 2xl:gap-6 mt-4">
