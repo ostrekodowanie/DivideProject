@@ -92,13 +92,7 @@ const Info = () => {
             <div className="flex flex-col gap-8">
                 <div className="flex flex-col gap-4">
                     <h3 className="text-[#4C3963] w-max font-medium">Work schedules</h3>
-                    <ul className="flex flex-col gap-[0.6rem] text-font">
-                        <li>Monday</li>
-                        <li>Tuesday</li>
-                        <li>Wednesday</li>
-                        <li>Thursday</li>
-                        <li>Friday</li>
-                    </ul>
+                    <h4 className="text-font">12 hours / 7 days</h4>
                 </div>
                 <div className="flex flex-col gap-4">
                     <h3 className="text-[#4C3963] w-max font-medium">Contact</h3>

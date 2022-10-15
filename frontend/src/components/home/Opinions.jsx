@@ -5,7 +5,7 @@ import { rating } from '../../assets/home'
 const opinions = [
     {
         name: 'Josh Smith',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit porta pretium odio aliquam at neque. Volutpat facilisi dignissim am.',
+        desc: "Great service. My website works exactly how I'd wanted it to work. It is also provided with a great design and functionality.",
         rate: 4.9
     },
     {
