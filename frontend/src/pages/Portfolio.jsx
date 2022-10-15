@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
+import { first, fourth, second, third } from "../assets/grid"
 
 export default function Portfolio() {
     
     return (
         <section className='padding bg-background flex flex-col py-[1.4in] md:py-[1.8in] gap-20 bg-landing'>
             <Live />
-            <Design />
+            <Grid />
         </section>
     )
 }
@@ -49,25 +50,31 @@ const LiveProject = props => {
     )
 }
 
-const Design = () => {
-    const [projects, setProjects] = useState([])
+const gridItems = [
+    first,
+    second,
+    third,
+    fourth
+]
+
+const Grid = () => {
     return (
         <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
                 <h3 className="bg-primary bg-clip-text text-transparent font-medium tracking-wider text-lg">DESIGN PRESENTATION</h3>
                 <h2 className="text-font text-4xl lg:text-5xl font-medium">Layouts</h2>
             </div>
-            <div className="flex flex-col sm:grid grid-cols-projects">
-                {/* {projects.map(project => <DesignImage src={project.src} key={project.src} />)} */}
+            <div className="flex flex-col sm:grid grid-cols-2 gap-8">
+                {gridItems.map((project, i) => <GridItem src={project} size={i % 2 === 0 && i !== 0 ? 'wide' : 'narrow'} key={project} />)}
             </div>
         </div>
     )
 }
 
-const DesignImage = ({ src }) => {
+const GridItem = ({ src, size }) => {
     return (
-        <div className="rounded-xl bg-pros backdrop-blur-md">
-            <img src={src} alt="" />
+        <div className={`rounded-xl gridItem bg-pros backdrop-blur-md p-6 ${size === 'wide' ? 'col-span-2' : ''}`}>
+            <img className={`object-cover rounded-xl w-full ${size === 'narrow' && 'max-h-[4.2in]'}`} src={src} alt="" />
         </div>
     )
 }
