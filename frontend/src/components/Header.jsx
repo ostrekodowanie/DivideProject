@@ -6,25 +6,18 @@ import { useLocation } from 'react-router'
 import { arrowLeft } from "../assets/home"
 
 export default function Header() {
-    const [scroll, setScroll] = useState(0)
-    const timer = useRef()
-
-    // useEffect(() => {
-    //     // debouncing scroll position
-    //     let callback = () => {
-    //         clearTimeout(timer.current)
-    //         if(scroll > 100) {
-    //             timer.current = setTimeout(() => {
-    //                 setScroll(window.scrollY)
-    //             }, 500)
-    //         } else return setScroll(window.scrollY)
-    //     }
-    //     window.addEventListener('scroll', callback)
-    //     return () => window.removeEventListener('scroll', callback)
-    // })
+    const [down, setDown] = useState(0)
+    
+    useEffect(() => {
+        const cb = () => {
+            setDown(window.scrollY > 100);
+        };
+        window.addEventListener("scroll", cb)
+        return () => window.removeEventListener("scroll", cb)
+    }, [])
 
     return (
-        <header className={`fixed top-0 right-0 transition-colors duration-300 left-0 z-50 ${scroll < 100 ? 'bg-transparent' : 'bg-background/90'}`}>
+        <header className={`fixed top-0 right-0 transition-colors duration-300 left-0 z-50 ${!down ? 'bg-transparent' : 'bg-background/80 backdrop-blur'}`}>
             <div className="padding min-h-[6rem] sm:min-h-[7rem] flex items-center justify-between relative w-full">
                 <Logo />
                 <NavProvider />
