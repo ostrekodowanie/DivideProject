@@ -10,7 +10,7 @@ const roles = [
             big: 'Designer'
         },
         name: 'Mateusz Szyszka',
-        p: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et amet interdum sed nibh orci, auctor. Dignissim donec neque ullamcorper aliquet eu. Non eget adipiscing nibh arcu et. Senectus massa massa purus platea mi accumsan dapibus egestas. Nunc scelerisque integer facilisi aliquam adipiscing volutpat mauris massa.',
+        p: "Creative and analitic thinker with ability to find beauty and usability in interfaces. As a psychology passionate I'm able to look closer into human emotions. Tools like Figma allow me to deliver functional and good looking layouts. My role is to put user on the first place, trying to understand his needs on the highest level possible.",
         img: designCode,
         order: 'right',
         properties: ['position_aspect_ratio: 1 / 3', 'paragraph_color_hex_value: B9B9B9', 'background_color_hex_value: 0A080C'],
