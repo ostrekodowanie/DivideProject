@@ -14,7 +14,8 @@ const roles = [
         img: designCode,
         order: 'right',
         properties: ['position_aspect_ratio: 1 / 3', 'paragraph_color_hex_value: B9B9B9', 'background_color_hex_value: 0A080C'],
-        codeTitle: 'Figma_Properties:'
+        codeTitle: 'Figma_Properties:',
+        section: 'm'
     },
     {
         title: {
@@ -26,7 +27,8 @@ const roles = [
         img: backendCode,
         order: 'left',
         properties: ['const [logged, setLogged] = useState(false)', 'onSubmit = () => setLogged(true)', "return navigate( ' /profile ' )"],
-        codeTitle: 'function Header(props) {'
+        codeTitle: 'function Header(props) {',
+        section: 'f'
     },
     {
         title: {
@@ -38,7 +40,8 @@ const roles = [
         img: backendCode,
         order: 'right',
         properties: ['def post(self, request):', 'password = request.data[‘password’]', 'user = User.objects.filter(email=email).first()...'],
-        codeTitle: 'class LoginView(APIView):'
+        codeTitle: 'class LoginView(APIView):',
+        section: 's'
     },
 ]
 
@@ -65,7 +68,7 @@ const RoleSection = props => {
     })
 
     return (
-        <section className='padding py-[1in] xl:py-[1.4in] flex flex-col bg-background bg-landing'>
+        <section id={props.section} className='padding py-[1in] xl:py-[1.4in] flex flex-col bg-background bg-landing'>
             <div className={`flex flex-col ${props.order === 'left' ? 'xl:flex-row-reverse' : 'xl:flex-row'} xl:items-center gap-16 xl:gap-48`}>
                 <div ref={text} className='flex flex-col gap-6 opacity-0 '>
                     <h2 className='flex flex-col gap-2 text-font font-semibold'>

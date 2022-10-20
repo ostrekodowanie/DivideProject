@@ -35,15 +35,15 @@ const Landing = () => {
             <div className='mr-[-8vw] md:mr-[-12vw] 2xl:mr-[-18vw] ml-auto relative z-10'>
                 <img className='2xl:w-full 2xl:max-w-[50vw]' src={landing} alt="" />
                 <div className='absolute -left-1 lg:-left-36 -bottom-8 flex items-center'>
-                    <div className='backdrop-blur-md bg-blur h-16 w-16 sm:h-24 sm:w-24 flex items-center justify-center rounded-full relative z-20'>
+                    <a href='#s' className='backdrop-blur-md transition-transform hover:scale-110 bg-blur h-16 w-16 sm:h-24 sm:w-24 flex items-center justify-center rounded-full relative z-20'>
                         <img className='max-h-[50%]' src={turek} alt="" />
-                    </div>
-                    <div className='backdrop-blur-md bg-blur h-16 w-16 sm:h-24 sm:w-24 flex items-center justify-center rounded-full relative z-10 -ml-6'>
+                    </a>
+                    <a href='#m' className='backdrop-blur-md transition-transform hover:scale-110 bg-blur h-16 w-16 sm:h-24 sm:w-24 flex items-center justify-center rounded-full relative z-10 -ml-6'>
                         <img className='max-h-[50%]' src={szyszka} alt="" />
-                    </div>
-                    <div className='backdrop-blur-md bg-blur h-16 w-16 sm:h-24 sm:w-24 flex items-center justify-center rounded-full -ml-6'>
+                    </a>
+                    <a href='#f' className='backdrop-blur-md transition-transform hover:scale-110 bg-blur h-16 w-16 sm:h-24 sm:w-24 flex items-center justify-center rounded-full -ml-6'>
                         <img className='max-h-[50%]' src={filip} alt="" />
-                    </div>
+                    </a>
                     <div className='absolute bottom-[46%] -left-20 hidden 2xl:block'>
                         <img className='motArrow' src={motArrow} alt='' />
                         <span className='mot absolute -top-12 text-fontLight w-max'>Meet our team</span>

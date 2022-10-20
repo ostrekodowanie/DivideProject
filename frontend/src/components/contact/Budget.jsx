@@ -23,7 +23,7 @@ export default function Budget({ setInfo }) {
     }, [input])
 
     return (
-        <div className={`relative z-10 flex flex-col justify-center ${inputStyles}`}>
+        <div className={`relative z-20 flex flex-col justify-center ${inputStyles}`}>
             <label htmlFor='budget' className="z-10 absolute inset-0 flex items-center">
                 <span className='transition left-6 absolute font-medium text-[#4C3963] duration-300 origin-left -translate-y-[60%] scale-75'>Budget</span>
             </label>

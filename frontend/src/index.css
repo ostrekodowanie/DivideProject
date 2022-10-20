@@ -11,6 +11,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+html, body {
+    scroll-behavior: smooth;
+}
+
 body {
     overflow-y: scroll;
     overflow-x: hidden;
