@@ -4,18 +4,18 @@ import { rating } from '../../assets/home'
 
 const opinions = [
     {
-        name: 'Josh Smith',
+        name: 'Ted Ratcliffe',
         desc: "Great service. My website works exactly how I'd wanted it to work. It is also provided with a great design and functionality.",
         rate: 4.9
     },
     {
-        name: 'Josh Smith',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit porta pretium odio aliquam at neque. Volutpat facilisi dignissim am.',
+        name: 'Meghan Rayner',
+        desc: "I was stunned by the quality of service these guys had provided for me. They've made me an e-commerce website with everything I'd previously wanted.",
         rate: 5.0
     },
     {
-        name: 'Josh Smith',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit porta pretium odio aliquam at neque. Volutpat facilisi dignissim am.',
+        name: 'Melvin North',
+        desc: 'Not many developers I worked with can do their job with so much accuracy as them. Absolutely worth recommending.',
         rate: 4.8
     }
 ]
