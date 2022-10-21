@@ -1,4 +1,4 @@
-import { designCode, react } from "../../assets/home"
+import { designCode, react, figma, dj, pstgrs } from "../../assets/home"
 
 const tools = [
     {
@@ -10,19 +10,19 @@ const tools = [
     {
         title: 'Django',
         p: 'High-level Python web framework',
-        img: react,
+        img: dj,
         href: 'https://www.djangoproject.com/'
     },
     {
         title: 'Figma',
         p: 'Collaboration design tool to create high-quality work',
-        img: react,
+        img: figma,
         href: 'https://www.figma.com/'
     },
     {
         title: 'PostgreSQL',
         p: 'Object-relational database system',
-        img: react,
+        img: pstgrs,
         href: 'https://www.postgresql.org/'
     }
 ]

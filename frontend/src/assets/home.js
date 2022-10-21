@@ -15,6 +15,9 @@ import fb from './fb.svg'
 import linkedin from './in.svg'
 import rating from './rating.svg'
 import react from './react.svg'
+import dj from './dj.svg'
+import figma from './figma.svg'
+import pstgrs from './pstgrs.svg'
 
 export {
     landing,
@@ -33,5 +36,8 @@ export {
     fb,
     linkedin,
     rating,
-    react
+    react,
+    dj,
+    figma,
+    pstgrs
 }
