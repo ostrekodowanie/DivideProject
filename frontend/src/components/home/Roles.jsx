@@ -36,7 +36,7 @@ const roles = [
             big: 'Developer'
         },
         name: 'Sebastian Magnucki',
-        p: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et amet interdum sed nibh orci, auctor. Dignissim donec neque ullamcorper aliquet eu. Non eget adipiscing nibh arcu et. Senectus massa massa purus platea mi accumsan dapibus egestas. Nunc scelerisque integer facilisi aliquam adipiscing volutpat mauris massa.',
+        p: 'Working in Python with Django framework, defining the structure of database logistic, integrating server-side rendering and creating complex data relations between different tables. Optimalizing information through database and creating sort of a window for it to be revealed on the website.',
         img: backendCode,
         order: 'right',
         properties: ['def post(self, request):', 'password = request.data[‘password’]', 'user = User.objects.filter(email=email).first()...'],
