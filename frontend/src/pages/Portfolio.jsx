@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { first, fourth, second, third } from "../assets/grid"
+import { first, fourth, second, third, fifth } from "../assets/grid"
 
 export default function Portfolio() {
     
@@ -54,7 +54,8 @@ const gridItems = [
     first,
     second,
     third,
-    fourth
+    fourth,
+    fifth
 ]
 
 const CoverSlider = ({ activeImage, setSliderImage }) => {
@@ -80,7 +81,7 @@ const Grid = () => {
                 <h2 className="text-font text-4xl lg:text-5xl font-medium">Layouts</h2>
             </div>
             <div className="flex flex-col sm:grid grid-cols-2 gap-8">
-                {gridItems.map((project, i) => <GridItem setSliderImage={setSliderImage} src={project} size={i % 2 === 0 && i !== 0 ? 'wide' : 'narrow'} key={project} />)}
+                {gridItems.map((project, i) => <GridItem setSliderImage={setSliderImage} src={project} size={(i + 1) % 3 === 0 ? 'wide' : 'narrow'} key={project} />)}
             </div>
         </div>
     )
@@ -89,7 +90,7 @@ const Grid = () => {
 const GridItem = ({ src, size, setSliderImage }) => {
     return (
         <div onClick={() => size === 'narrow' && setSliderImage(src)} className={`rounded-xl gridItem bg-pros backdrop-blur-md p-6 ${size === 'wide' ? 'col-span-2' : 'hover:scale-[1.02] cursor-pointer transition-transform duration-300'}`}>
-            <img className={`object-cover rounded-xl w-full ${size === 'narrow' && 'max-h-[4.2in]'}`} src={src} alt="" />
+            <img className={`object-cover rounded-xl w-full ${size === 'narrow' && 'max-h-[3.5in]'}`} src={src} alt="" />
         </div>
     )
 }
