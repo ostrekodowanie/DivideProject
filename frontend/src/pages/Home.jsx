@@ -6,6 +6,7 @@ import Roles from '../components/home/Roles'
 import Pros from '../components/home/Pros'
 import Opinions from '../components/home/Opinions'
 import Tools from '../components/home/Tools'
+import Banner from '../components/home/Banner'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -17,6 +18,7 @@ export default function Home() {
             <Pros />
             <Tools />
             <Opinions />
+            <Banner />
         </>
     )
 }
