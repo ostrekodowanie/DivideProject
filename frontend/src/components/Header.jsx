@@ -9,19 +9,15 @@ export default function Header() {
     const [down, setDown] = useState(0)
     
     useEffect(() => {
-        const cb = () => {
-            setDown(window.scrollY > 100);
-        };
+        const cb = () => setDown(window.scrollY > 100);
         window.addEventListener("scroll", cb)
         return () => window.removeEventListener("scroll", cb)
     }, [])
 
     return (
-        <header className={`fixed top-0 right-0 transition-colors duration-300 left-0 z-50 ${!down ? 'bg-transparent' : 'bg-background/80 backdrop-blur'}`}>
-            <div className="padding min-h-[6rem] sm:min-h-[7rem] flex items-center justify-between relative w-full">
-                <Logo />
-                <NavProvider />
-            </div>
+        <header className={`fixed top-0 right-0 transition-all duration-300 left-0 z-50 padding flex items-center justify-between w-full ${!down ? 'bg-transparent min-h-[6rem] sm:min-h-[7rem]' : 'bg-background/80 backdrop-blur min-h-[5rem]'}`}>
+            <Logo />
+            <NavProvider />
         </header>
     )
 }
