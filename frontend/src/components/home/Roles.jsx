@@ -1,5 +1,6 @@
 import { designCode, backendCode } from "../../assets/home"
 import CodeBox from "../CodeBox"
+import Control from "react-control-js"
 
 const roles = [
     {
