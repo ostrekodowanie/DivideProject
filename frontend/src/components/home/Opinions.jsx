@@ -1,6 +1,5 @@
-import gsap, { Power0 } from "gsap"
-import { useEffect } from 'react'
 import { rating } from '../../assets/home'
+import Control, { Controller } from 'react-control-js'
 
 const opinions = [
     {
@@ -21,26 +20,12 @@ const opinions = [
 ]
 
 export default function Opinions() {
-    useEffect(() => {
-        const boxes = gsap.utils.toArray('.opinion')
-        gsap.to(boxes, {
-            scrollTrigger: {
-                start: 'top 60%',
-                trigger: '.opinion'
-            },
-            stagger: 0.1,
-            y: '0%',
-            opacity: 1,
-            ease: Power0.easeOut
-        })
-    })
-
     return (
         <section className='padding py-[1in] xl:py-[1.4in] flex flex-col bg-background bg-landing'>
             <h2 className='text-font text-center text-3xl xl:text-4xl font-semibold mb-16'>What do clients say about us?</h2>
-            <div className='flex flex-wrap justify-center lg:grid-cols-2 lg:grid xl:grid-cols-3 gap-16 xl:gap-8'>
-                {opinions.map(opinion => <Opinion {...opinion} key={opinion.name} />)}
-            </div>
+            <Controller opacity={1} onScroll={true} stagger={100} className='flex flex-wrap justify-center lg:grid-cols-2 lg:grid xl:grid-cols-3 gap-16 xl:gap-8'>
+                {opinions.map(opinion => <Control element={<Opinion {...opinion} key={opinion.name} />} />)}
+            </Controller>
         </section>
     )
 }

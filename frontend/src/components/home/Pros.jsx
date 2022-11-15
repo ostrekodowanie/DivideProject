@@ -1,6 +1,5 @@
 import { pros1, pros2, pros3 } from "../../assets/home"
-import gsap, { Power0 } from "gsap"
-import { useEffect } from 'react' 
+import Control, { Controller } from 'react-control-js'
 
 const pros = [
     {
@@ -21,26 +20,12 @@ const pros = [
 ]
 
 export default function Pros() {
-    useEffect(() => {
-        const boxes = gsap.utils.toArray('.box')
-        gsap.to(boxes, {
-            scrollTrigger: {
-                start: 'top 60%',
-                trigger: '.box'
-            },
-            stagger: 0.1,
-            y: '0%',
-            opacity: 1,
-            ease: Power0.easeOut
-        })
-    })
-
     return (
         <section className='padding py-[1in] xl:py-[1.4in] flex flex-col bg-background bg-landing'>
             <h2 className='text-font text-center text-3xl xl:text-4xl font-semibold mb-16'>Why would you choose us?</h2>
-            <div className='flex flex-wrap justify-center lg:grid-cols-2 lg:grid xl:grid-cols-3 gap-16 xl:gap-8'>
-                {pros.map(pro => <Pro {...pro} key={pro.title} />)}
-            </div>
+            <Controller opacity={1} onScroll={true} stagger={true} className='flex flex-wrap justify-center lg:grid-cols-2 lg:grid xl:grid-cols-3 gap-16 xl:gap-8'>
+                {pros.map(pro => <Control element={<Pro {...pro} key={pro.title} />} />)}
+            </Controller>
         </section>
     )
 }

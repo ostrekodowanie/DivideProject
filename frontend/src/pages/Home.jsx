@@ -1,14 +1,11 @@
 import { Link } from 'react-router-dom'
 import { landing, arrowLeft, turek, szyszka, filip, motArrow } from '../assets/home'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Roles from '../components/home/Roles'
 import Pros from '../components/home/Pros'
 import Opinions from '../components/home/Opinions'
 import Tools from '../components/home/Tools'
 import Banner from '../components/home/Banner'
-
-gsap.registerPlugin(ScrollTrigger)
+import Control from 'react-control-js'
 
 export default function Home() {
     return (
@@ -17,8 +14,8 @@ export default function Home() {
             <Roles />
             <Pros />
             <Tools />
-            <Opinions />
             <Banner />
+            <Opinions />
         </>
     )
 }
@@ -26,6 +23,7 @@ export default function Home() {
 const Landing = () => {
     return (
         <section className='padding bg-background flex flex-col py-[1.4in] gap-12 bg-landing lg:flex-row lg:items-center lg:justify-end'>
+            <Control opacity={1} delay={200} x={-40} ease='ease-out' element={
             <div className="landing flex flex-col gap-6 xl:mb-[8vw]">
                 <h1 className="text-font text-[2.7rem] leading-[1.1] font-semibold lg:w-max xl:text-5xl 2xl:text-[4rem]">We create<br />best <span className='bg-primary bg-clip-text text-transparent'>website</span><br />experiences</h1>
                 <p className="text-fontLight font-medium text-sm 2xl:text-[1rem]">Contact us and get the website you deserve to have.</p>
@@ -34,6 +32,7 @@ const Landing = () => {
                     <a className='text-font py-2 px-5 cursor-pointer text-sm border-[1px] border-font rounded-3xl font-medium 2xl:text-md 2xl:py-3 transition-transform hover:scale-105 flex items-center' href="https://services.divideproject.works" target='_blank'>Visit shop<img className='max-h-[1em] ml-2' src={arrowLeft} alt="" /></a>
                 </div>
             </div>
+            } />
             <div className='mr-[-8vw] md:mr-[-12vw] 2xl:mr-[-18vw] ml-auto relative z-10'>
                 <img className='2xl:w-full 2xl:max-w-[50vw]' src={landing} alt="" />
                 <div className='absolute -left-1 lg:-left-36 -bottom-8 flex items-center'>

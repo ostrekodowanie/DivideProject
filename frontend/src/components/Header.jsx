@@ -6,7 +6,7 @@ import { useLocation } from 'react-router'
 import { arrowLeft } from "../assets/home"
 
 export default function Header() {
-    const [down, setDown] = useState(0)
+    const [down, setDown] = useState(false)
     
     useEffect(() => {
         const cb = () => setDown(window.scrollY > 100);
