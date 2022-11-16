@@ -17,7 +17,7 @@ export default function Budget({ setInfo }) {
         setInfo(prev => {
             return {
                 ...prev,
-                goal: input
+                budget: input
             }
         })
     }, [input])

@@ -69,7 +69,7 @@ const Input = ({ field, setInfo }) => {
         setInfo(prev => {
             return {
                 ...prev,
-                field: input
+                [field]: input
             }
         })
     }, [input])
