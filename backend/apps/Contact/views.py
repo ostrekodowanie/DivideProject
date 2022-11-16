@@ -12,12 +12,12 @@ class ContactView(GenericAPIView):
         first_name = serializer.data['first_name']
         last_name = serializer.data['last_name']
         email = serializer.data['email']
-        business_goal = serializer.data['business_goal']
+        goal = serializer.data['goal']
         budget = serializer.data['budget']
         message = serializer.data['message']
 
         email_subject = 'Contact: ' + first_name + ' ' + last_name
-        email_body = 'Email: ' + email + '\nFirst name: ' + first_name + '\nLast_name: ' + last_name + '\nBusiness_goal: ' + business_goal + '\nBudget: ' + budget + '\nMessage: \n' + message
+        email_body = 'Email: ' + email + '\nFirst name: ' + first_name + '\nLast_name: ' + last_name + '\nGoal: ' + goal + '\nBudget: ' + budget + '\nMessage: \n' + message
         data = {'email_body': email_body, 'to_email': 'divideproject.business@gmail.com', 'email_subject': email_subject}
         Util.send_email(data)
 
