@@ -1,5 +1,5 @@
-import { rating } from '../../assets/home'
 import Control, { Controller } from 'react-control-js'
+import { rating } from '../../assets/home'
 
 const opinions = [
     {
@@ -23,7 +23,7 @@ export default function Opinions() {
     return (
         <section className='padding py-[1in] xl:py-[1.4in] flex flex-col bg-background bg-landing'>
             <h2 className='text-font text-center text-3xl xl:text-4xl font-semibold mb-16'>What do clients say about us?</h2>
-            <Controller opacity={1} onScroll={true} stagger={100} className='flex flex-wrap justify-center lg:grid-cols-2 lg:grid xl:grid-cols-3 gap-16 xl:gap-8'>
+            <Controller opacity={1} stagger={100} onScroll={true} className='flex flex-wrap justify-center lg:grid-cols-2 lg:grid xl:grid-cols-3 gap-16 xl:gap-8'>
                 {opinions.map(opinion => <Control element={<Opinion {...opinion} key={opinion.name} />} />)}
             </Controller>
         </section>
@@ -32,7 +32,7 @@ export default function Opinions() {
 
 const Opinion = props => {
     return (
-        <div className='opinion p-6 translate-y-[10%] opacity-0 flex flex-col gap-2 bg-pros backdrop-blur-md rounded-lg after:absolute after:h-[3px] after:bg-primary after:left-0 after:right-0 after:bottom-0 border-[2px] border-[#B91DFF]/10'>
+        <div className='opinion p-6 translate-y-[10%] h-full flex flex-col gap-2 bg-pros backdrop-blur-md rounded-lg after:absolute after:h-[3px] after:bg-primary after:left-0 after:right-0 after:bottom-0 border-[2px] border-[#B91DFF]/10'>
             <div className='flex items-center justify-between'>
                 <h3 className='font-semibold text-lg text-font'>{props.name}</h3>
                 <span className='bg-primary bg-clip-text text-transparent font-bold text-4xl'>“</span>

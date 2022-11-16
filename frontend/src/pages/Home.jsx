@@ -23,15 +23,15 @@ export default function Home() {
 const Landing = () => {
     return (
         <section className='padding bg-background flex flex-col py-[1.4in] gap-12 bg-landing lg:flex-row lg:items-center lg:justify-end'>
-            <Control opacity={1} delay={200} x={-40} ease='ease-out' element={
-            <div className="landing flex flex-col gap-6 xl:mb-[8vw]">
-                <h1 className="text-font text-[2.7rem] leading-[1.1] font-semibold lg:w-max xl:text-5xl 2xl:text-[4rem]">We create<br />best <span className='bg-primary bg-clip-text text-transparent'>website</span><br />experiences</h1>
-                <p className="text-fontLight font-medium text-sm 2xl:text-[1rem]">Contact us and get the website you deserve to have.</p>
-                <div className="flex flex-wrap items-center gap-4 2xl:gap-6 mt-4">
-                    <Link className='bg-primary text-font cursor-pointer text-sm py-2 px-5 rounded-3xl font-medium 2xl:text-md 2xl:py-3 transition-transform hover:scale-105 flex items-center' to='/portfolio'>View portfolio<img className='max-h-[1em] ml-2' src={arrowLeft} alt="" /></Link>
-                    <a className='text-font py-2 px-5 cursor-pointer text-sm border-[1px] border-font rounded-3xl font-medium 2xl:text-md 2xl:py-3 transition-transform hover:scale-105 flex items-center' href="https://services.divideproject.works" target='_blank'>Visit shop<img className='max-h-[1em] ml-2' src={arrowLeft} alt="" /></a>
+            <Control opacity={1} x={-40} delay={200} element={
+                <div className="landing flex flex-col gap-6 xl:mb-[8vw]">
+                    <h1 className="text-font text-[2.7rem] leading-[1.1] font-semibold lg:w-max xl:text-5xl 2xl:text-[4rem]">We create<br />best <span className='bg-primary bg-clip-text text-transparent'>website</span><br />experiences</h1>
+                    <p className="text-fontLight font-medium text-sm 2xl:text-[1rem]">Contact us and get the website you deserve to have.</p>
+                    <div className="flex flex-wrap items-center gap-4 2xl:gap-6 mt-4">
+                        <Link className='bg-primary text-font cursor-pointer text-sm py-2 px-5 rounded-3xl font-medium 2xl:text-md 2xl:py-3 transition-transform hover:scale-105 flex items-center' to='/portfolio'>View portfolio<img className='max-h-[1em] ml-2' src={arrowLeft} alt="" /></Link>
+                        <a className='text-font py-2 px-5 cursor-pointer text-sm border-[1px] border-font rounded-3xl font-medium 2xl:text-md 2xl:py-3 transition-transform hover:scale-105 flex items-center' href="https://services.divideproject.works" target='_blank'>Visit shop<img className='max-h-[1em] ml-2' src={arrowLeft} alt="" /></a>
+                    </div>
                 </div>
-            </div>
             } />
             <div className='mr-[-8vw] md:mr-[-12vw] 2xl:mr-[-18vw] ml-auto relative z-10'>
                 <img className='2xl:w-full 2xl:max-w-[50vw]' src={landing} alt="" />

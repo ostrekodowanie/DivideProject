@@ -1,5 +1,5 @@
+import Control, { Controller } from "react-control-js"
 import { pros1, pros2, pros3 } from "../../assets/home"
-import Control, { Controller } from 'react-control-js'
 
 const pros = [
     {
@@ -23,7 +23,7 @@ export default function Pros() {
     return (
         <section className='padding py-[1in] xl:py-[1.4in] flex flex-col bg-background bg-landing'>
             <h2 className='text-font text-center text-3xl xl:text-4xl font-semibold mb-16'>Why would you choose us?</h2>
-            <Controller opacity={1} onScroll={true} stagger={true} className='flex flex-wrap justify-center lg:grid-cols-2 lg:grid xl:grid-cols-3 gap-16 xl:gap-8'>
+            <Controller opacity={1} stagger={100} onScroll={true} className='flex flex-wrap justify-center lg:grid-cols-2 lg:grid xl:grid-cols-3 gap-16 xl:gap-8'>
                 {pros.map(pro => <Control element={<Pro {...pro} key={pro.title} />} />)}
             </Controller>
         </section>
@@ -32,7 +32,7 @@ export default function Pros() {
 
 const Pro = props => {
     return (
-        <div className='box p-10 translate-y-[5%] opacity-0 flex flex-col items-center gap-3 bg-pros backdrop-blur-md text-center rounded-lg after:absolute after:h-[3px] after:bg-primary after:left-0 after:right-0 after:bottom-0 border-[2px] border-[#B91DFF]/10'>
+        <div className='box p-10 translate-y-[5%] h-full flex flex-col items-center gap-3 bg-pros backdrop-blur-md text-center rounded-lg after:absolute after:h-[3px] after:bg-primary after:left-0 after:right-0 after:bottom-0 border-[2px] border-[#B91DFF]/10'>
             <div className='h-16 w-16 mb-6 rounded-md flex items-center justify-center relative overflow-hidden'>
                 <div className='absolute inset-0 bg-primary opacity-[0.16]' />
                 <img className='max-h-[50%]' src={props.img} alt="" />

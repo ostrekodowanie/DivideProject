@@ -1,6 +1,6 @@
 import { designCode, backendCode } from "../../assets/home"
 import CodeBox from "../CodeBox"
-import Control from "react-control-js"
+import Control from 'react-control-js'
 
 const roles = [
     {
@@ -56,8 +56,8 @@ const RoleSection = props => {
     return (
         <section id={props.section} className='padding py-[1in] xl:py-[1.4in] flex flex-col bg-background bg-landing'>
             <div className={`flex flex-col ${props.order === 'left' ? 'xl:flex-row-reverse' : 'xl:flex-row'} xl:items-center gap-16 xl:gap-48`}>
-                <Control opacity={1} onScroll={true} element={
-                    <div className='flex flex-col gap-6 opacity-0 '>
+                <Control opacity={1} delay={200} ease='ease-out' onScroll={true} element={
+                    <div className='flex flex-col gap-6'>
                         <h2 className='flex flex-col gap-2 text-font font-semibold'>
                             <span className='text-2xl'>{props.title.small}</span>
                             <span className='text-5xl'>{props.title.big}</span>
@@ -67,7 +67,7 @@ const RoleSection = props => {
                     </div>
                 } />
                 <div className={props.order === 'left' ? 'xl:ml-[-12vw] 2xl:ml-[-18vw] lg:mr-auto relative' : 'xl:mr-[-12vw] 2xl:mr-[-18vw] lg:ml-auto relative'}>
-                    <img className='relative z-10' src={props.img} alt="" />
+                    <Control onScroll={true} opacity={1} element={<img className='relative z-10' src={props.img} alt="" />} />
                     <CodeBox className={`-bottom-8 ${props.order === 'left' ? '-right-24' : '-left-24'} z-10`} title={props.codeTitle} properties={props.properties} />
                 </div>
             </div>
